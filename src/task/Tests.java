@@ -2,6 +2,11 @@ package task;
 
 import base.Design;
 
+import java.util.Arrays;
+import java.util.Objects;
+
+import static task.Main.twoSum;
+
 /**
  * Набор ручных тестов для проверки соответствия вывода кода (от input) к answer
  */
@@ -69,22 +74,27 @@ public class Tests {
      */
     public static boolean test1() {
         TestDesc testDesc = new TestDesc(
-                "",
-                "",
-                ""
+                "nums = [2,7,11,15], target = 9",
+                "[0,1]",
+                "The sum of nums[0] and nums[1] is 2 + 7 = 9, which equals the target. Therefore, the indices [0, 1] are returned."
         );
         // vars: test data
+        int[] nums = {2,7,11,15};
+        int target = 9;
+        int[] answer = {0,1};
 
         // calculate Output
+        int[] output = twoSum(nums, target);
 
         // print all
         Design.printTestData(new Object() {
         }.getClass().getEnclosingMethod(), testDesc, """
-                
-                """.formatted());
+                %s
+                """.formatted(Arrays.toString(output)));
 
         // comparison of output and answer
-        // if () return false;
+        if (!Arrays.equals(answer, output))
+            return false;
 
         return true; // Универсальная заглушка
     }
@@ -96,22 +106,27 @@ public class Tests {
      */
     public static boolean test2() {
         TestDesc testDesc = new TestDesc(
-                "",
-                "",
-                ""
+                "nums = [3,2,4], target = 6",
+                "[1,2]",
+                "The sum of nums[1] and nums[2] is 2 + 4 = 6, which equals the target. Therefore, the indices [1, 2] are returned."
         );
         // vars: test data
+        int[] nums = {3,2,4};
+        int target = 6;
+        int[] answer = {1,2};
 
         // calculate Output
+        int[] output = twoSum(nums, target);
 
         // print all
         Design.printTestData(new Object() {
         }.getClass().getEnclosingMethod(), testDesc, """
-                
-                """.formatted());
+                %s
+                """.formatted(Arrays.toString(output)));
 
         // comparison of output and answer
-        // if () return false;
+        if (!Arrays.equals(answer, output))
+            return false;
 
         return true; // Универсальная заглушка
     }
@@ -123,22 +138,27 @@ public class Tests {
      */
     public static boolean test3() {
         TestDesc testDesc = new TestDesc(
-                "",
-                "",
-                ""
+                "nums = [3,3], target = 6",
+                "[0,1]",
+                "The sum of nums[0] and nums[1] is 3 + 3 = 6, which equals the target. Therefore, the indices [0, 1] are returned."
         );
         // vars: test data
+        int[] nums = {3,3};
+        int target = 6;
+        int[] answer = {0,1};
 
         // calculate Output
+        int[] output = twoSum(nums, target);
 
         // print all
         Design.printTestData(new Object() {
         }.getClass().getEnclosingMethod(), testDesc, """
-                
-                """.formatted());
+                %s
+                """.formatted(Arrays.toString(output)));
 
         // comparison of output and answer
-        // if () return false;
+        if (!Arrays.equals(answer, output))
+            return false;
 
         return true; // Универсальная заглушка
     }
