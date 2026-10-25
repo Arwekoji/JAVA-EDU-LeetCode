@@ -3,7 +3,6 @@ package task;
 import base.Design;
 
 import java.util.Arrays;
-import java.util.Objects;
 
 import static task.Main.twoSum;
 
